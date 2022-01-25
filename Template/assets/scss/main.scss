@@ -1,0 +1,158 @@
+.dribble_leftside {
+  height: 800px;
+  background-color: #f1cdd7;
+  img {
+    width: 50%;
+    // padding: 60px 40px;
+    padding-top: 60px;
+    padding-inline: 30px;
+    padding-bottom: 30px;
+  }
+  h1 {
+    color: #865c6c;
+    padding: 50px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+.left_main {
+  img {
+    width: 80%;
+  }
+}
+.dribble_rightside {
+  p {
+    float: right;
+    padding-top: 30px;
+  }
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    padding-left: 105px;
+    font-weight: 700;
+    padding-top: 160px;
+    margin-bottom: 20px;
+  }
+}
+.right_blue_box {
+  background-color: blue;
+  border: 1px solid blue;
+  width: 50%;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.line {
+  h4 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  h4:before,
+  h4:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #000;
+    margin: auto;
+  }
+}
+.create {
+  background-color: #f75492;
+  color: white;
+  padding-inline: 30px;
+  margin-bottom: 20px;
+  &:hover {
+    background-color: #ff2f7f !important;
+    color: white !important;
+  }
+}
+.right_space {
+  padding-inline: 60px;
+}
+.form_bottom_text {
+  p {
+    width: 45%;
+    font-size: 12px;
+    color: gray;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.twitter {
+  margin-left: 40px;
+  // padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  i {
+    color: #6e6d7a;
+    padding: 20px;
+  }
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: purple;
+}
+.custom_input {
+  background-color: #f3f3f4;
+  :hover {
+    border: 1px solid pink/10;
+    background-color: white;
+  }
+}
+//
+
+.btn_twi {
+  padding: 6px 15px;
+  background-color: #f3f3f4;
+}
+.forgot {
+  a {
+    text-decoration: none;
+    display: inline;
+    float: right;
+    color: #4f3cc9;
+  }
+}
+.signin {
+  background-color: #f75492;
+  color: white;
+  padding-inline: 60px;
+  &:hover {
+    background-color: #ff2f7f !important;
+    color: white !important;
+  }
+}
+.left {
+  padding-left: 0;
+}
+//
+.forgot_right {
+  padding-top: 200px;
+  h1 {
+    font-weight: 700;
+  }
+}
+.custom_left {
+  i {
+    background-color: royalblue;
+    color: royalblue;
+  }
+}
+.left_circle {
+  margin-top: 20px;
+  float: left;
+  padding: 10px 18px;
+  width: 50px;
+  height: 50px;
+  // border: 1px solid blue;
+  border-radius: 25px;
+  // background: blue;
+  outline: 1px solid gray;
+}
