@@ -67,20 +67,51 @@
     text-decoration: none; }
 
 .twitter {
-  margin-left: 40px;
+  margin-left: 10px;
   background-color: #f2f2f2;
   border-radius: 6px; }
   .twitter i {
     color: #6e6d7a;
-    padding: 20px; }
+    padding-top: 14px; }
+
+.bluebtn {
+  padding-right: 0px;
+  background: blue;
+  width: 330px;
+  height: 60px; }
+
+.main_flex {
+  display: flex; }
+
+.customdown {
+  margin-left: 8px;
+  color: white;
+  font-size: 12px; }
+
+.blue_flex {
+  text-align: left;
+  color: white;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column; }
+
+.google {
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-inline: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: white; }
 
 .circle {
-  width: 50px;
-  height: 50px;
+  margin-top: 10px;
+  width: 25px;
+  height: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  background: purple; }
+  background: purple;
+  color: white; }
 
 .custom_input {
   background-color: #f3f3f4; }
