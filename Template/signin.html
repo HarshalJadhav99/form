@@ -22,12 +22,42 @@
       href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,700;1,300&display=swap"
       rel="stylesheet"
     /> -->
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link
+      rel="stylesheet"
+      href="https://formden.com/static/cdn/bootstrap-iso.css"
+    />
+
+    <!-- Inline CSS based on choices in "Settings" tab -->
+    <style>
+      .bootstrap-iso .formden_header h2,
+      .bootstrap-iso .formden_header p,
+      .bootstrap-iso form {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      .bootstrap-iso form button,
+      .bootstrap-iso form button:hover {
+        color: white !important;
+      }
+      .bootstrap-iso .form-control:focus {
+        /* border: none; */
+        border-color: #ea4c897e;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(234, 76, 137, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(234, 76, 137, 0.6);
+      }
+      .asteriskField {
+        color: red;
+      }
+    </style>
   </head>
 
   <body>
-    <!---------------------- SignUp Form Start ---------------------->
+    <!---------------------- SignIn Form Start ---------------------->
     <section>
-      <div>
+      <div class="bootstrap-iso">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-5 left">
@@ -48,24 +78,44 @@
                 <h2>Sign in to Dribbble</h2>
               </div>
               <div class="mx-xl-5 right_space">
-                <button class="btn btn-primary px-5 fw-bold">
-                  <i class="fab fa-google me-2"></i>sign in with Google
-                </button>
-                <button class="btn btn_twi">
+                <a
+                  href="https://accounts.google.com/gsi/select?client_id=32073492121-s6ur8ti01mh34gq2bpbufb8ujdfrpn4v.apps.googleusercontent.com&ux_mode=redirect&login_uri=https%3A%2F%2Fdribbble.com%2Fauth%2Fgoogle_one_tap%2Fcallback&ui_mode=card&as=C4FKpbCACVKm8Lx8X7vI6A&g_csrf_token=d29fb1b84ff9d17c"
+                >
+                  <button class="btn btn-primary px-xl-5 fw-bold">
+                    <i class="fab fa-google me-2 ps-xl-4"></i
+                    ><span class="pe-xl-4"> sign in with Google</span>
+                  </button>
+                </a>
+                <!-- <button class="btn btn-primary fw-bold ps-1 py-1">
+                    <img
+                      class="google_custom"
+                      src="./assets/images/google.png"
+                      alt=""
+                    />
+                    <span class="px-xl-5">sign in with Google</span>
+                  </button> -->
+
+                <button class="btn btn_twi ms-xl-2">
                   <i class="fab fa-twitter"></i>
                 </button>
                 <div class="line"><h4>or</h4></div>
                 <div>
-                  <form class="row g-3">
+                  <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-12">
                       <label for="inputEmail4" class="form-label"
                         >Username or Email Address</label
                       >
-                      <input
-                        type="email"
-                        class="form-control custom_input"
-                        id="inputEmail4"
-                      />
+                      <div class="input-group has-validation">
+                        <input
+                          type="email"
+                          class="form-control custom_input"
+                          id="inputEmail4"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please choose a username.
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-12 forgot">
                       <label for="inputPassword4" class="form-label"
@@ -78,12 +128,21 @@
                         type="password"
                         class="form-control custom_input"
                         id="inputPassword4"
+                        required
                         placeholder="6+ characters"
                       />
+                      <div class="invalid-feedback">
+                        Please enter valid password.
+                      </div>
                     </div>
 
                     <div class="col-12">
-                      <button type="submit" class="btn signin">Sign In</button>
+                      <button type="submit" class="btn signin signin_mob">
+                        Sign In
+                      </button>
+                      <p class="create_p">
+                        Already a member?<a href="./signin.html">Sign In</a>
+                      </p>
                     </div>
                   </form>
                 </div>
@@ -93,7 +152,7 @@
         </div>
       </div>
     </section>
-    <!---------------------- SignUp Form End ---------------------->
+    <!---------------------- SignIn Form End ---------------------->
 
     <!-- Jquery -->
     <script src="./assets/js/jquery.js"></script>
@@ -106,5 +165,30 @@
     <script src="./assets/js/bootstrap.min.js"></script>
     <!-- JS -->
     <script src="./assets/js/main.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
